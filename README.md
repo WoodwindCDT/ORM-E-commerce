@@ -57,5 +57,5 @@ Example:
 
     - [mysql2](https://www.npmjs.com/package/mysql2): "^2.2.5"
 
-  ## Licence
+  ## License
   This Project is licensed via MIT
