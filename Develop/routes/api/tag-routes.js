@@ -10,7 +10,7 @@ router.get('/', (req, res) => {
     include: [
       {
         model: Product,
-        attributes: ['ProductTag']
+        as: 'Product_Tag'
       }
     ]
   }).then(dbTagData => res.json(dbTagData))
@@ -30,10 +30,16 @@ router.get('/:id', (req, res) => {
     include: [
       {
         model: Product,
-        attributes: ['ProductTag']
+        as: 'Product_Tag'
       }
     ]
-  }).then(dbTagData => res.json(dbTagData))
+  }).then(dbTagData => {
+    if (!dbTagData) {
+      res.status(404).json({ message: 'No Tag found with this id' });
+      return;
+    }
+    res.json(dbTagData);
+  })
   .catch(err => {
     console.log(err);
     res.status(500).json(err);
