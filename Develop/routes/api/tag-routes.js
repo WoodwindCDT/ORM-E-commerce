@@ -10,7 +10,7 @@ router.get('/', (req, res) => {
     include: [
       {
         model: Product,
-        as: 'Product_Tag'
+        as: 'ProductTag'
       }
     ]
   }).then(dbTagData => res.json(dbTagData))
@@ -30,7 +30,7 @@ router.get('/:id', (req, res) => {
     include: [
       {
         model: Product,
-        as: 'Product_Tag'
+        as: 'ProductTag'
       }
     ]
   }).then(dbTagData => {

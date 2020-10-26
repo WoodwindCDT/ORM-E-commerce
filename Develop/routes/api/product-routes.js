@@ -13,7 +13,7 @@ router.get('/', (req, res) => {
     },
     {
       model: Tag,
-      as: 'Product_Tag'
+      as: 'ProductTag'
     }
   ]
   }).then(dbProductData => res.json(dbProductData))
@@ -36,7 +36,7 @@ router.get('/:id', (req, res) => {
     },
     {
       model: Tag,
-      as: 'Product_Tag'
+      as: 'ProductTag'
     }
   ]
   }).then(dbProductData => {
