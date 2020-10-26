@@ -18,7 +18,7 @@
   ## Installation
   
   Click here for an Instructional Video!
-  > (Incoming)
+  > https://www.youtube.com/watch?v=czkxiz_f1AE
   
   ## Usage
   
